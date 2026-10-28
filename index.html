@@ -1,0 +1,2890 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DRG injury gene-expression project</title><style>body{margin:0;background:#f5f7fa;color:#193047;font:17px/1.65 Arial,sans-serif}main{max-width:1250px;margin:auto;padding:30px 22px}h1{font-size:32px;line-height:1.25}h2{margin-top:40px}a{color:#216494}nav a{display:inline-block;margin:5px 14px 5px 0}iframe{display:block;width:100%;border:1px solid #dce4eb;border-radius:10px;background:white}section{margin:28px 0}small{color:#526474}.status{padding:14px;background:#e8eff5}li{margin:10px 0}</style></head><body><main>
+<h1>DRG gene-expression responses following spinal cord injury and partial sciatic nerve ligation</h1>
+<p class="status">Exploratory secondary analysis • Descriptive results • Not peer reviewed</p>
+<nav><a href="#introduction">Introduction</a><a href="#methods">Methods</a><a href="#results">Results</a><a href="#limitations">Limitations</a><a href="#references">References</a></nav>
+<h2 id="introduction">Introduction</h2>
+<p>Axon regeneration is the regrowth of an injured neuron’s axon. Understanding gene-expression responses associated with injury may help explain how neurons respond to damage.</p>
+<p>Following peripheral nerve injury, Schwann cells enter a repair state that supports debris clearance and axonal regrowth (Nocera &amp; Jacob, 2020). Interactions between Schwann cells and macrophages also contribute to the repair response (Li et al., 2025). Differences in inflammatory and supporting-cell responses provide context for comparing peripheral and central nervous system injuries (Mietto et al., 2015).</p>
+<p>Dorsal root ganglia (DRG) contain sensory neuron cell bodies whose axons have peripheral and central branches. This project examines ATF3, STAT3, GAP43, and JUN expression. RNA abundance does not directly measure successful regeneration.</p>
+<h3>Genes examined</h3><p>ATF3 encodes an injury-responsive transcription factor; STAT3 encodes a signaling protein and transcription factor associated with injury signaling and regeneration initiation. GAP43 encodes a growth-associated protein, while JUN encodes c-Jun, a transcription factor involved in injury-responsive gene regulation. These genes represent regulatory and growth-related processes (Lee &amp; Cho, 2021; Cuevas-Diaz Duran et al., 2023).</p>
+<section id="figure1"><h3>Figure 1. Peripheral and central injury responses</h3><p><a href="figure1.html">Open figure separately</a></p><iframe title="Figure 1: Peripheral and central injury responses" style="height:850px" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+
+&lt;title&gt;PNS vs CNS Injury Response&lt;/title&gt;
+
+&lt;style&gt;
+
+:root {
+  --text: #1f2933;
+  --muted: #5f6b76;
+  --border: #aab2bb;
+
+  --pns-main: #2f7d66;
+  --pns-light: #e8f4ef;
+
+  --cns-main: #8b4f5c;
+  --cns-light: #f5e9ec;
+
+  --neutral: #f7f8fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px;
+  background: white;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+}
+
+.figure {
+  max-width: 1450px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 35px;
+  font-size: 15px;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: start;
+}
+
+.pathway {
+  padding: 25px;
+  border: 1px solid #d7dce1;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.pathway-title {
+  text-align: center;
+  font-size: 23px;
+  margin-bottom: 5px;
+}
+
+.pathway-description {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.pns .pathway-title {
+  color: var(--pns-main);
+}
+
+.cns .pathway-title {
+  color: var(--cns-main);
+}
+
+
+/* PROCESS BOXES */
+
+.step {
+  border: 1.2px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 18px;
+  line-height: 1.45;
+  font-size: 14px;
+}
+
+.pns .step {
+  background: var(--pns-light);
+}
+
+.cns .step {
+  background: var(--cns-light);
+}
+
+.step-title {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.step p {
+  margin: 0;
+}
+
+.details {
+  margin-top: 9px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(0,0,0,0.12);
+  font-size: 13px;
+}
+
+.details ul {
+  margin: 6px 0 0 18px;
+  padding: 0;
+}
+
+.details li {
+  margin: 4px 0;
+}
+
+
+/* ARROWS */
+
+.arrow {
+  width: 2px;
+  height: 32px;
+  margin: auto;
+  position: relative;
+}
+
+.pns .arrow {
+  background: var(--pns-main);
+}
+
+.cns .arrow {
+  background: var(--cns-main);
+}
+
+.arrow::after {
+  content: &quot;&quot;;
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  width: 8px;
+  height: 8px;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.pns .arrow::after {
+  border-right: 2px solid var(--pns-main);
+  border-bottom: 2px solid var(--pns-main);
+}
+
+.cns .arrow::after {
+  border-right: 2px solid var(--cns-main);
+  border-bottom: 2px solid var(--cns-main);
+}
+
+
+/* OUTCOME */
+
+.outcome {
+  padding: 18px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.pns .outcome {
+  background: #d7eee5;
+  border: 1.5px solid var(--pns-main);
+  color: #205b4a;
+}
+
+.cns .outcome {
+  background: #f0dce1;
+  border: 1.5px solid var(--cns-main);
+  color: #6e3945;
+}
+
+
+/* COMPARISON SUMMARY */
+
+.summary {
+  margin-top: 35px;
+  padding: 20px 24px;
+  border: 1px solid #ccd2d8;
+  background: var(--neutral);
+  border-radius: 10px;
+  line-height: 1.55;
+  font-size: 14px;
+}
+
+.summary strong {
+  color: #111;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .columns {
+    grid-template-columns: 1fr;
+  }
+
+  body {
+    padding: 20px;
+  }
+}
+
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;div class=&quot;figure&quot;&gt;
+
+&lt;h1&gt;Peripheral vs Central Nervous System Response to Axonal Injury&lt;/h1&gt;
+
+&lt;div class=&quot;subtitle&quot;&gt;
+Comparison of cellular events that promote regeneration in the PNS
+and restrict regeneration in the CNS
+&lt;/div&gt;
+
+
+&lt;div class=&quot;columns&quot;&gt;
+
+&lt;!-- ==================== PNS ==================== --&gt;
+
+&lt;div class=&quot;pathway pns&quot;&gt;
+
+&lt;div class=&quot;pathway-title&quot;&gt;
+Peripheral Nervous System (PNS)
+&lt;/div&gt;
+
+&lt;div class=&quot;pathway-description&quot;&gt;
+Peripheral nerve injury produces a repair-supportive environment
+&lt;/div&gt;
+
+
+&lt;div class=&quot;step&quot;&gt;
+  &lt;div class=&quot;step-title&quot;&gt;1. Peripheral Axon Damage&lt;/div&gt;
+  &lt;p&gt;
+    Injury disrupts the peripheral axon and initiates a cellular repair response.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+
+
+&lt;div class=&quot;step&quot;&gt;
+  &lt;div class=&quot;step-title&quot;&gt;2. Wallerian Degeneration Begins&lt;/div&gt;
+
+  &lt;p&gt;
+    The distal axon and surrounding myelin begin to break down after axotomy.
+  &lt;/p&gt;
+
+  &lt;div class=&quot;details&quot;&gt;
+    Schwann cells proliferate and transition from a myelinating state
+    into a specialized repair phenotype.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+
+
+&lt;div class=&quot;step&quot;&gt;
+  &lt;div class=&quot;step-title&quot;&gt;3. Schwann Cell Reprogramming&lt;/div&gt;
+
+  &lt;p&gt;
+    Repair Schwann cells change their gene-expression programs to support regeneration.
+  &lt;/p&gt;
+
+  &lt;div class=&quot;details&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Pro-myelinating genes decrease&lt;/li&gt;
+      &lt;li&gt;MAPK signaling is activated&lt;/li&gt;
+      &lt;li&gt;c-Jun activity increases&lt;/li&gt;
+      &lt;li&gt;Repair-associated signaling pathways are activated&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+
+
+&lt;div class=&quot;step&quot;&gt;
+  &lt;div class=&quot;step-title&quot;&gt;4. Immune Recruitment and Debris Clearance&lt;/div&gt;
+
+  &lt;p&gt;
+    Repair Schwann cells release cytokines and signaling molecules that
+    recruit macrophages and other immune cells.
+  &lt;/p&gt;
+
+  &lt;div class=&quot;details&quot;&gt;
+    Damaged axonal and myelin debris is efficiently removed, allowing
+    Wallerian degeneration to progress.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+
+
+&lt;div class=&quot;step&quot;&gt;
+  &lt;div class=&quot;step-title&quot;&gt;5. Regenerative Pathway Formation&lt;/div&gt;
+
+  &lt;p&gt;
+    Repair Schwann cells release growth-supporting factors and organize
+    into longitudinal structures known as &lt;i&gt;Bands of Büngner&lt;/i&gt;.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+
+
+&lt;div class=&quot;step&quot;&gt;
+  &lt;div class=&quot;step-title&quot;&gt;6. Axonal Regrowth&lt;/div&gt;
+
+  &lt;p&gt;
+    Regenerating growth cones extend through the Bands of Büngner toward
+    their original peripheral targets.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+
+
+&lt;div class=&quot;step&quot;&gt;
+  &lt;div class=&quot;step-title&quot;&gt;7. Remyelination and Repair Resolution&lt;/div&gt;
+
+  &lt;p&gt;
+    After axonal reconnection, Schwann cells return toward a mature
+    myelinating state. Excess repair cells may undergo apoptosis.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+
+
+&lt;div class=&quot;outcome&quot;&gt;
+Outcome: Strong axonal regeneration and potential functional recovery
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+
+&lt;!-- ==================== CNS ==================== --&gt;
+
+&lt;div class=&quot;pathway cns&quot;&gt;
+
+&lt;div class=&quot;pathway-title&quot;&gt;
+Central Nervous System (CNS)
+&lt;/div&gt;
+
+&lt;div class=&quot;pathway-description&quot;&gt;
+Central injury produces a protective but growth-restrictive environment
+&lt;/div&gt;
+
+
+&lt;div class=&quot;step&quot;&gt;
+  &lt;div class=&quot;step-title&quot;&gt;1. Central Axon Damage&lt;/div&gt;
+
+  &lt;p&gt;
+    Injury damages axons and surrounding neural tissue within the
+    spinal cord or brain.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+
+
+&lt;div class=&quot;step&quot;&gt;
+  &lt;div class=&quot;step-title&quot;&gt;2. Oligodendrocyte Damage and Myelin Breakdown&lt;/div&gt;
+
+  &lt;p&gt;
+    Oligodendrocytes are damaged or die, causing CNS myelin to break down.
+  &lt;/p&gt;
+
+  &lt;div class=&quot;details&quot;&gt;
+    Myelin-associated inhibitory molecules are released and can restrict
+    growth-cone extension.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+
+
+&lt;div class=&quot;step&quot;&gt;
+  &lt;div class=&quot;step-title&quot;&gt;3. Blood–Brain / Blood–Spinal Cord Barrier Disruption&lt;/div&gt;
+
+  &lt;p&gt;
+    Injury disrupts the vascular barrier, allowing circulating immune cells
+    and blood-derived molecules to enter the damaged tissue.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+
+
+&lt;div class=&quot;step&quot;&gt;
+  &lt;div class=&quot;step-title&quot;&gt;4. Microglial and Immune Activation&lt;/div&gt;
+
+  &lt;p&gt;
+    Microglia detect injury signals, become activated, and release cytokines.
+  &lt;/p&gt;
+
+  &lt;div class=&quot;details&quot;&gt;
+    Microglia and recruited immune cells remove cellular and myelin debris
+    through phagocytosis.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+
+
+&lt;div class=&quot;step&quot;&gt;
+  &lt;div class=&quot;step-title&quot;&gt;5. Reactive Astrocytes and Glial Scar Formation&lt;/div&gt;
+
+  &lt;p&gt;
+    Astrocytes become reactive, proliferate, and move toward the injury site.
+  &lt;/p&gt;
+
+  &lt;div class=&quot;details&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Contain inflammation&lt;/li&gt;
+      &lt;li&gt;Stabilize surrounding tissue&lt;/li&gt;
+      &lt;li&gt;Help restore the damaged vascular barrier&lt;/li&gt;
+      &lt;li&gt;Produce a physical and chemical barrier around the injury&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+
+
+&lt;div class=&quot;step&quot;&gt;
+  &lt;div class=&quot;step-title&quot;&gt;6. Persistent Inflammation&lt;/div&gt;
+
+  &lt;p&gt;
+    Continued inflammatory signaling can maintain astrocyte activation
+    and glial-scar formation.
+  &lt;/p&gt;
+
+  &lt;div class=&quot;details&quot;&gt;
+    Prolonged inflammation may also contribute to secondary tissue damage.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+
+
+&lt;div class=&quot;step&quot;&gt;
+  &lt;div class=&quot;step-title&quot;&gt;7. Partial Regeneration-Associated Gene Activation&lt;/div&gt;
+
+  &lt;p&gt;
+    Some injured neurons activate regeneration-associated genes, but the
+    response is generally insufficient to overcome the surrounding CNS environment.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+
+
+&lt;div class=&quot;step&quot;&gt;
+  &lt;div class=&quot;step-title&quot;&gt;8. Axonal Regeneration Remains Restricted&lt;/div&gt;
+
+  &lt;div class=&quot;details&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Glial scar creates physical and chemical barriers&lt;/li&gt;
+      &lt;li&gt;Myelin-associated inhibitors restrict growth-cone extension&lt;/li&gt;
+      &lt;li&gt;Persistent inflammation can produce secondary damage&lt;/li&gt;
+      &lt;li&gt;CNS repair emphasizes tissue stabilization rather than extensive regrowth&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+
+
+&lt;div class=&quot;outcome&quot;&gt;
+Outcome: Limited axonal regeneration and incomplete functional recovery
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+
+&lt;div class=&quot;summary&quot;&gt;
+
+&lt;strong&gt;Key comparison:&lt;/strong&gt;
+Both PNS and CNS injuries trigger degeneration, inflammation, and cellular
+repair responses. In the PNS, repair Schwann cells efficiently clear debris
+and create pathways that support axonal regrowth. In the CNS, oligodendrocyte
+damage, myelin-associated inhibitors, persistent inflammation, and glial-scar
+formation create an environment that restricts regeneration.
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;aside style=&quot;max-width:1150px;margin:24px auto;padding:18px;background:#fff;border-left:4px solid #3979ab;font:15px/1.6 Arial;color:#193047&quot;&gt;&lt;strong&gt;Figure 1. Peripheral and central injury responses.&lt;/strong&gt; Biological background on cellular responses that support or restrict regeneration. These mechanisms were not measured in this project. Background sources: Nocera &amp;amp; Jacob (2020); Mietto et al. (2015); Gaudet et al. (2011).&lt;/aside&gt;&lt;/body&gt;
+&lt;/html&gt;" onload="resizeFigure(this)"></iframe></section><section id="figure3"><h3>Figure 3. DRG structure and injury signaling</h3><p><a href="figure3.html">Open figure separately</a></p><iframe title="Figure 3: DRG structure and injury signaling" style="height:850px" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+
+&lt;title&gt;Dorsal Root Ganglion and Injury Signaling&lt;/title&gt;
+
+&lt;style&gt;
+
+:root {
+    --text: #1f2937;
+    --muted: #64748b;
+    --border: #cbd5e1;
+
+    --pns: #2f7d66;
+    --pns-light: #e9f5f0;
+
+    --drg: #526aa3;
+    --drg-light: #edf1fa;
+
+    --cns: #985564;
+    --cns-light: #f7ebee;
+
+    --signal: #d29a38;
+    --signal-light: #fff5df;
+
+    --gene: #7656a4;
+    --gene-light: #f1ebf8;
+
+    --background: #f5f7fa;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+.figure {
+    max-width: 1250px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 7px;
+    font-size: 29px;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--muted);
+    margin-bottom: 35px;
+    font-size: 15px;
+}
+
+
+/* MAIN NEURON DIAGRAM */
+
+.neuron-layout {
+    display: grid;
+    grid-template-columns: 1fr 310px 1fr;
+    gap: 25px;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+
+/* AXON PANELS */
+
+.axon {
+    min-height: 180px;
+    border-radius: 12px;
+    padding: 22px;
+    border: 1px solid var(--border);
+}
+
+.peripheral {
+    background: var(--pns-light);
+    border-top: 6px solid var(--pns);
+}
+
+.central {
+    background: var(--cns-light);
+    border-top: 6px solid var(--cns);
+}
+
+.axon-title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.peripheral .axon-title {
+    color: var(--pns);
+}
+
+.central .axon-title {
+    color: var(--cns);
+}
+
+.axon p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+
+/* DRG CENTER */
+
+.drg {
+    background: var(--drg-light);
+    border: 2px solid var(--drg);
+    border-radius: 50%;
+    min-height: 250px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 28px;
+    text-align: center;
+
+    box-shadow: 0 4px 13px rgba(0,0,0,0.08);
+}
+
+.drg-title {
+    color: var(--drg);
+    font-weight: 700;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.drg p {
+    margin: 3px 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.nucleus {
+    margin-top: 14px;
+    padding: 10px 15px;
+    border-radius: 40px;
+
+    border: 1px solid #7d89aa;
+    background: white;
+
+    font-weight: 700;
+    font-size: 14px;
+}
+
+
+/* HORIZONTAL CONNECTIONS */
+
+.connection {
+    height: 4px;
+    background: #7e8792;
+    position: relative;
+}
+
+.connection::after {
+    content: &quot;&quot;;
+    position: absolute;
+    right: -1px;
+    top: 50%;
+
+    width: 10px;
+    height: 10px;
+
+    border-top: 3px solid #7e8792;
+    border-right: 3px solid #7e8792;
+
+    transform:
+        translateY(-50%)
+        rotate(45deg);
+}
+
+
+/* SIGNAL PATHWAY */
+
+.signal-section {
+    background: white;
+    border: 1px solid #d7dce2;
+    border-radius: 14px;
+    padding: 26px;
+    margin-top: 20px;
+
+    box-shadow: 0 4px 14px rgba(0,0,0,.06);
+}
+
+.signal-title {
+    text-align: center;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.flow {
+    display: grid;
+    grid-template-columns:
+        1fr 45px
+        1fr 45px
+        1fr 45px
+        1fr;
+    align-items: stretch;
+}
+
+.flow-box {
+    padding: 17px;
+    border-radius: 9px;
+    border: 1px solid var(--border);
+    line-height: 1.45;
+    font-size: 14px;
+}
+
+.injury-box {
+    background: #f8e5e5;
+}
+
+.signal-box {
+    background: var(--signal-light);
+}
+
+.nucleus-box {
+    background: var(--drg-light);
+}
+
+.gene-box {
+    background: var(--gene-light);
+}
+
+.flow-box strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+
+.flow-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7c8794;
+    font-size: 30px;
+}
+
+
+/* RESULT */
+
+.result {
+    margin-top: 23px;
+    padding: 17px 20px;
+
+    border-left: 5px solid var(--gene);
+    background: #f6f3fa;
+
+    border-radius: 7px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+
+/* KEY CONCEPT */
+
+.key-concept {
+    margin-top: 27px;
+    padding: 20px 24px;
+
+    background: white;
+    border: 1px solid #d6dce3;
+    border-radius: 10px;
+
+    line-height: 1.55;
+    font-size: 14px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .neuron-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .connection {
+        width: 4px;
+        height: 35px;
+        margin: auto;
+    }
+
+    .connection::after {
+        display: none;
+    }
+
+    .flow {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .flow-arrow {
+        transform: rotate(90deg);
+        height: 30px;
+    }
+
+}
+
+&lt;/style&gt;
+&lt;/head&gt;
+
+
+&lt;body&gt;
+
+&lt;div class=&quot;figure&quot;&gt;
+
+&lt;h1&gt;Dorsal Root Ganglion and Injury-Induced Gene Expression&lt;/h1&gt;
+
+&lt;div class=&quot;subtitle&quot;&gt;
+How one sensory neuron connects the peripheral and central nervous systems
+and changes gene expression after axonal injury
+&lt;/div&gt;
+
+
+&lt;!-- ==================================================== --&gt;
+&lt;!-- DRG ANATOMY --&gt;
+&lt;!-- ==================================================== --&gt;
+
+&lt;div class=&quot;neuron-layout&quot;&gt;
+
+
+&lt;div class=&quot;axon peripheral&quot;&gt;
+
+    &lt;div class=&quot;axon-title&quot;&gt;
+        Peripheral Branch — PNS
+    &lt;/div&gt;
+
+    &lt;p&gt;
+        Extends from the sensory neuron toward the skin, muscles,
+        joints, and other peripheral tissues.
+    &lt;/p&gt;
+
+    &lt;br&gt;
+
+    &lt;p&gt;
+        Injury to this branch can generate a damage signal that travels
+        back toward the DRG cell body.
+    &lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;div class=&quot;drg&quot;&gt;
+
+    &lt;div class=&quot;drg-title&quot;&gt;
+        Dorsal Root Ganglion
+    &lt;/div&gt;
+
+    &lt;p&gt;
+        Cluster of sensory neuron cell bodies located just outside
+        the spinal cord.
+    &lt;/p&gt;
+
+    &lt;p&gt;
+        The same sensory neuron has both a peripheral and central axon.
+    &lt;/p&gt;
+
+    &lt;div class=&quot;nucleus&quot;&gt;
+        Nucleus → DNA → Gene Transcription
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+
+&lt;div class=&quot;axon central&quot;&gt;
+
+    &lt;div class=&quot;axon-title&quot;&gt;
+        Central Branch — CNS
+    &lt;/div&gt;
+
+    &lt;p&gt;
+        Extends from the DRG sensory neuron into the spinal cord,
+        where sensory information enters the central nervous system.
+    &lt;/p&gt;
+
+    &lt;br&gt;
+
+    &lt;p&gt;
+        Injury to this branch can also send a damage signal back
+        toward the same DRG cell body.
+    &lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+
+
+&lt;!-- ==================================================== --&gt;
+&lt;!-- INJURY SIGNAL --&gt;
+&lt;!-- ==================================================== --&gt;
+
+&lt;div class=&quot;signal-section&quot;&gt;
+
+&lt;div class=&quot;signal-title&quot;&gt;
+What Happens After Axonal Injury?
+&lt;/div&gt;
+
+
+&lt;div class=&quot;flow&quot;&gt;
+
+
+&lt;div class=&quot;flow-box injury-box&quot;&gt;
+
+    &lt;strong&gt;1. Axon is injured&lt;/strong&gt;
+
+    Either the peripheral or central branch of the DRG neuron
+    experiences damage.
+
+&lt;/div&gt;
+
+
+&lt;div class=&quot;flow-arrow&quot;&gt;
+    →
+&lt;/div&gt;
+
+
+&lt;div class=&quot;flow-box signal-box&quot;&gt;
+
+    &lt;strong&gt;2. Retrograde injury signaling&lt;/strong&gt;
+
+    Molecular signals generated near the injury travel backward
+    along the axon toward the DRG cell body.
+
+&lt;/div&gt;
+
+
+&lt;div class=&quot;flow-arrow&quot;&gt;
+    →
+&lt;/div&gt;
+
+
+&lt;div class=&quot;flow-box nucleus-box&quot;&gt;
+
+    &lt;strong&gt;3. Signal reaches the nucleus&lt;/strong&gt;
+
+    The injury signal activates intracellular signaling pathways
+    and transcription factors inside the DRG neuron.
+
+&lt;/div&gt;
+
+
+&lt;div class=&quot;flow-arrow&quot;&gt;
+    →
+&lt;/div&gt;
+
+
+&lt;div class=&quot;flow-box gene-box&quot;&gt;
+
+    &lt;strong&gt;4. Gene expression changes&lt;/strong&gt;
+
+    Certain genes increase or decrease their transcription,
+    changing the amount of mRNA produced by the neuron.
+
+&lt;/div&gt;
+
+
+&lt;/div&gt;
+
+
+&lt;div class=&quot;result&quot;&gt;
+
+&lt;strong&gt;Examples:&lt;/strong&gt;
+Transcription factors and regeneration-associated genes such as
+&lt;i&gt;ATF3&lt;/i&gt;, &lt;i&gt;JUN&lt;/i&gt;, &lt;i&gt;GAP43&lt;/i&gt;, and &lt;i&gt;STAT3&lt;/i&gt; may change
+expression following injury. RNA sequencing of DRG tissue can measure
+these changes in mRNA abundance.
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+
+
+&lt;div class=&quot;key-concept&quot;&gt;
+
+&lt;strong&gt;Key concept:&lt;/strong&gt;
+The DRG is not simply a bridge between the PNS and CNS. It contains
+the sensory neuron&#x27;s cell body and nucleus. Because both the peripheral
+and central axon belong to the same neuron, injury to either branch can
+trigger retrograde signaling back to the DRG. The nucleus then changes
+gene transcription, producing different amounts of mRNA that can be
+measured using RNA sequencing.
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;aside style=&quot;max-width:1150px;margin:24px auto;padding:18px;background:#fff;border-left:4px solid #3979ab;font:15px/1.6 Arial;color:#193047&quot;&gt;&lt;strong&gt;Figure 3. DRG structure and injury signaling.&lt;/strong&gt; Conceptual illustration of a sensory neuron’s peripheral and central branches and injury signaling toward its DRG cell body. This is background rather than a measurement of signaling in these datasets.&lt;/aside&gt;&lt;/body&gt;
+&lt;/html&gt;" onload="resizeFigure(this)"></iframe></section>
+<h2 id="methods">Purpose and methods</h2><p><strong>Research question:</strong> How do changes in ATF3, STAT3, GAP43, and JUN expression in DRG samples differ between SCI and pSNL, relative to each dataset’s control group?</p>
+<p>This project used processed rat DRG expression data from Supplementary Table S2 of Cuevas-Diaz Duran et al. (2023). Samples labeled Charik and Sun were selected. Charik SCI (n = 6) was compared with naïve controls (n = 4), and Sun pSNL (n = 3) with sham controls (n = 3). The original investigators performed the animal procedures and sequencing; the published analysis supplied processed expression values. This project selected samples and genes, calculated means and descriptive differences, and prepared visualizations.</p>
+<p>For each gene, the arithmetic mean of the processed log₂-expression values was calculated for each group. Injury-minus-control changes were calculated from unrounded means. No new significance testing was performed.</p>
+<section id="figure2"><h3>Figure 2. Research workflow</h3><p><a href="figure2.html">Open figure separately</a></p><iframe title="Figure 2: Research workflow" style="height:850px" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;title&gt;Research Methods Workflow&lt;/title&gt;
+
+&lt;style&gt;
+:root {
+  --text: #1f2937;
+  --muted: #64748b;
+  --border: #cbd5e1;
+  --blue: #365f8d;
+  --pns: #3f7d68;
+  --pns-light: #edf6f2;
+  --cns: #875764;
+  --cns-light: #f7eef0;
+  --analysis: #65558f;
+  --analysis-light: #f1eef8;
+  --bg: #f7f8fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px 24px;
+  background: var(--bg);
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+}
+
+.figure {
+  max-width: 1050px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 30px;
+  margin: 0 0 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.study-design,
+.workflow-step {
+  max-width: 850px;
+  margin: auto;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .05);
+}
+
+.study-design {
+  padding: 20px 24px;
+  border-top: 5px solid var(--blue);
+}
+
+.study-design h2 {
+  margin: 0 0 10px;
+  text-align: center;
+  font-size: 20px;
+  color: var(--blue);
+}
+
+.study-design p {
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Connecting arrows */
+.arrow {
+  width: 2px;
+  height: 34px;
+  background: #8b96a3;
+  margin: auto;
+  position: relative;
+}
+
+.arrow::after {
+  content: &quot;&quot;;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #8b96a3;
+  border-bottom: 2px solid #8b96a3;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+/* Dataset comparison cards */
+.injury-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .05);
+}
+
+.card-header {
+  padding: 14px 18px;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sci .card-header {
+  background: var(--cns);
+}
+
+.pni .card-header {
+  background: var(--pns);
+}
+
+.sci .card-body {
+  background: var(--cns-light);
+}
+
+.pni .card-body {
+  background: var(--pns-light);
+}
+
+.card-body {
+  padding: 18px 22px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+li {
+  margin: 8px 0;
+}
+
+.merge {
+  max-width: 390px;
+  margin: auto;
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  background: #eef2f6;
+  border: 1px solid #ccd5df;
+  border-radius: 25px;
+}
+
+.step-header {
+  padding: 14px 20px;
+  background: var(--blue);
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.step-body {
+  padding: 18px 24px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.note {
+  margin-top: 12px;
+  padding: 11px 14px;
+  background: #f7f9fb;
+  border-left: 4px solid #91a1b3;
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.analysis .step-header {
+  background: var(--analysis);
+}
+
+.analysis .step-body {
+  background: var(--analysis-light);
+}
+
+.source {
+  max-width: 850px;
+  margin: 26px auto 0;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+  text-align: center;
+}
+
+a {
+  color: var(--blue);
+}
+
+@media (max-width: 760px) {
+  .injury-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body {
+    padding: 25px 15px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;div class=&quot;figure&quot;&gt;
+
+&lt;h1&gt;Research Methods Workflow&lt;/h1&gt;
+
+&lt;div class=&quot;subtitle&quot;&gt;
+  Secondary analysis of published rat dorsal root ganglion RNA-seq data
+&lt;/div&gt;
+
+&lt;!-- STUDY DESIGN --&gt;
+&lt;div class=&quot;study-design&quot;&gt;
+  &lt;h2&gt;Study Design and Data Source&lt;/h2&gt;
+  &lt;p&gt;
+    This project used processed rat
+    &lt;strong&gt;dorsal root ganglion (DRG)&lt;/strong&gt;
+    expression data from &lt;strong&gt;Supplementary Table S2&lt;/strong&gt;
+    of &lt;em&gt;Major Differences in Transcriptional Alterations in
+    Dorsal Root Ganglia Between Spinal Cord Injury and Peripheral
+    Neuropathic Pain Models&lt;/em&gt;.
+    The Charik and Sun datasets were selected to describe DRG
+    responses to central and peripheral injury.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+
+&lt;!-- DATASETS AND COMPARISONS --&gt;
+&lt;div class=&quot;injury-grid&quot;&gt;
+
+  &lt;div class=&quot;card sci&quot;&gt;
+    &lt;div class=&quot;card-header&quot;&gt;
+      Charik: SCI vs Naïve
+    &lt;/div&gt;
+    &lt;div class=&quot;card-body&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          DRG samples following
+          &lt;strong&gt;spinal cord injury (SCI)&lt;/strong&gt;
+          were compared with naïve samples from the same dataset.
+        &lt;/li&gt;
+        &lt;li&gt;
+          Selected groups:
+          &lt;strong&gt;4 naïve samples and 6 SCI samples&lt;/strong&gt;.
+        &lt;/li&gt;
+        &lt;li&gt;
+          Naïve controls do not account for effects caused by
+          surgery or anesthesia.
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card pni&quot;&gt;
+    &lt;div class=&quot;card-header&quot;&gt;
+      Sun: pSNL vs Sham
+    &lt;/div&gt;
+    &lt;div class=&quot;card-body&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          DRG samples following
+          &lt;strong&gt;partial sciatic nerve ligation (pSNL)&lt;/strong&gt;
+          were compared with sham controls from the same dataset.
+        &lt;/li&gt;
+        &lt;li&gt;
+          Selected groups:
+          &lt;strong&gt;3 sham samples and 3 pSNL samples&lt;/strong&gt;.
+        &lt;/li&gt;
+        &lt;li&gt;
+          Sham controls underwent the corresponding surgical
+          procedure without the nerve ligation.
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;merge&quot;&gt;
+  Published data generation and processing
+&lt;/div&gt;
+
+&lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+
+&lt;!-- ORIGINAL INVESTIGATORS --&gt;
+&lt;div class=&quot;workflow-step&quot;&gt;
+  &lt;div class=&quot;step-header&quot;&gt;
+    1. Original Studies: DRG Collection and RNA Sequencing
+  &lt;/div&gt;
+
+  &lt;div class=&quot;step-body&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        The original investigators collected rat DRG tissue
+        and extracted RNA.
+      &lt;/li&gt;
+      &lt;li&gt;
+        RNA-seq libraries were prepared and sequenced according
+        to each original study’s protocol.
+      &lt;/li&gt;
+      &lt;li&gt;
+        These laboratory procedures were performed by the
+        original investigators.
+      &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;note&quot;&gt;
+      Whole DRG tissue contains sensory neurons and non-neuronal
+      cells. Expression values represent the sampled tissue,
+      rather than isolated neurons alone.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+
+&lt;!-- PUBLISHED PROCESSING --&gt;
+&lt;div class=&quot;workflow-step&quot;&gt;
+  &lt;div class=&quot;step-header&quot;&gt;
+    2. Published Meta-analysis: Expression Processing
+  &lt;/div&gt;
+
+  &lt;div class=&quot;step-body&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        The article’s authors processed sequencing data to
+        quantify gene expression.
+      &lt;/li&gt;
+      &lt;li&gt;
+        Normalized counts were log₂-transformed and adjusted
+        for study-related batch effects using ComBat.
+      &lt;/li&gt;
+      &lt;li&gt;
+        The processed expression matrix was supplied in
+        Supplementary Table S2.
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+
+&lt;!-- YOUR GENE SELECTION --&gt;
+&lt;div class=&quot;workflow-step analysis&quot;&gt;
+  &lt;div class=&quot;step-header&quot;&gt;
+    3. This Project: Select Genes and Samples
+  &lt;/div&gt;
+
+  &lt;div class=&quot;step-body&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        Extract individual sample values for
+        &lt;strong&gt;ATF3, STAT3, GAP43, and JUN (c-Jun)&lt;/strong&gt;
+        from the processed log₂ expression matrix.
+      &lt;/li&gt;
+      &lt;li&gt;
+        Organize the samples into naïve, SCI, sham, and pSNL groups.
+      &lt;/li&gt;
+      &lt;li&gt;
+        Use the corrected sample values shown in the project tables; document sample inclusion.
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+
+&lt;!-- YOUR CALCULATIONS --&gt;
+&lt;div class=&quot;workflow-step analysis&quot;&gt;
+  &lt;div class=&quot;step-header&quot;&gt;
+    4. This Project: Calculate Descriptive Changes
+  &lt;/div&gt;
+
+  &lt;div class=&quot;step-body&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        Calculate the arithmetic mean of the log₂ expression
+        values for each gene in each group.
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;strong&gt;Charik log₂ change = SCI mean − naïve mean.&lt;/strong&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;strong&gt;Sun log₂ change = pSNL mean − sham mean.&lt;/strong&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        Where displayed, calculate
+        &lt;strong&gt;2&lt;sup&gt;log₂ change&lt;/sup&gt;&lt;/strong&gt;.
+        This represents a ratio of geometric means on the
+        underlying adjusted expression scale.
+      &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;note&quot;&gt;
+      These descriptive changes are calculated from group means.
+      They are not the article’s model-derived log₂ fold-change
+      estimates or adjusted p-values.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
+
+&lt;!-- YOUR FIGURES --&gt;
+&lt;div class=&quot;workflow-step analysis&quot;&gt;
+  &lt;div class=&quot;step-header&quot;&gt;
+    5. This Project: Plot and Compare Patterns
+  &lt;/div&gt;
+
+  &lt;div class=&quot;step-body&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;strong&gt;Dot plots:&lt;/strong&gt;
+        show each sample and its group mean.
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;strong&gt;Log₂-change chart:&lt;/strong&gt;
+        compare SCI relative to naïve controls with pSNL
+        relative to sham controls for each gene.
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;strong&gt;Box plots:&lt;/strong&gt;
+        show medians, quartiles, whiskers, and individual samples.
+      &lt;/li&gt;
+      &lt;li&gt;
+        The comparison is exploratory. No new DEG identification,
+        PCA, heatmaps, or gene-level significance tests were
+        performed in this project.
+      &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;note&quot;&gt;
+      The datasets have different study designs and control groups.
+      Observed differences cannot be attributed solely to injury
+      type. Both datasets measure DRG expression; regeneration
+      itself was not measured.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;source&quot;&gt;
+  Source:
+  &lt;a href=&quot;https://pmc.ncbi.nlm.nih.gov/articles/PMC10150729/&quot;&gt;
+    Published article and supplementary data — PMC10150729
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;aside style=&quot;max-width:1150px;margin:24px auto;padding:18px;background:#fff;border-left:4px solid #3979ab;font:15px/1.6 Arial;color:#193047&quot;&gt;&lt;strong&gt;Figure 2. Research workflow.&lt;/strong&gt; Secondary analysis workflow: published data processing, selection of four genes and sample groups, descriptive calculations, and visualization.&lt;/aside&gt;&lt;/body&gt;
+&lt;/html&gt;" onload="resizeFigure(this)"></iframe></section><section id="figure4"><h3>Figure 4. Injury and control groups</h3><p><a href="figure4.html">Open figure separately</a></p><iframe title="Figure 4: Injury and control groups" style="height:850px" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+
+&lt;title&gt;Experimental Groups&lt;/title&gt;
+
+&lt;style&gt;
+:root {
+  --text: #1f2937;
+  --muted: #64748b;
+  --sci: #8b5563;
+  --sci-light: #f7ecef;
+  --pni: #397862;
+  --pni-light: #edf6f2;
+  --control: #eef2f6;
+  --border: #cbd5e1;
+  --bg: #f7f8fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px 25px;
+  background: var(--bg);
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+}
+
+.figure {
+  max-width: 1050px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 10px;
+  font-size: 29px;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.groups {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.section {
+  background: white;
+  border: 1px solid #d8dee6;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .05);
+}
+
+.section-header {
+  color: white;
+  padding: 16px 20px;
+  text-align: center;
+}
+
+.sci .section-header {
+  background: var(--sci);
+}
+
+.pni .section-header {
+  background: var(--pni);
+}
+
+.section-header h2 {
+  margin: 0 0 6px;
+  font-size: 22px;
+}
+
+.section-header p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.section-body {
+  padding: 22px;
+}
+
+.group-card {
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 17px 19px;
+}
+
+.sci .injured {
+  background: var(--sci-light);
+}
+
+.pni .injured {
+  background: var(--pni-light);
+}
+
+.control {
+  background: var(--control);
+}
+
+.group-title {
+  font-weight: bold;
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.group-card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.sample-count {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 4px 9px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.vs {
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.comparison {
+  margin-top: 16px;
+  padding: 14px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.sci .comparison {
+  background: #f3e5e9;
+  color: #6f3c49;
+}
+
+.pni .comparison {
+  background: #e3f1eb;
+  color: #285f4c;
+}
+
+.control-note {
+  margin-top: 15px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+.note {
+  margin-top: 28px;
+  background: white;
+  border-left: 5px solid #52677f;
+  border-radius: 8px;
+  padding: 18px 22px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.note p {
+  margin: 8px 0 0;
+}
+
+.source {
+  text-align: center;
+  margin-top: 22px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+a {
+  color: #365f8d;
+}
+
+@media (max-width: 760px) {
+  .groups {
+    grid-template-columns: 1fr;
+  }
+
+  body {
+    padding: 25px 15px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;div class=&quot;figure&quot;&gt;
+
+&lt;h1&gt;Injury and Control Groups Used in This Project&lt;/h1&gt;
+
+&lt;div class=&quot;subtitle&quot;&gt;
+  Rat dorsal root ganglion (DRG) expression data from the
+  Charik and Sun datasets
+&lt;/div&gt;
+
+&lt;div class=&quot;groups&quot;&gt;
+
+  &lt;!-- CHARIK DATASET --&gt;
+  &lt;section class=&quot;section sci&quot;&gt;
+
+    &lt;div class=&quot;section-header&quot;&gt;
+      &lt;h2&gt;Charik Dataset&lt;/h2&gt;
+      &lt;p&gt;Spinal cord injury (SCI) vs naïve controls&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;section-body&quot;&gt;
+
+      &lt;div class=&quot;group-card injured&quot;&gt;
+        &lt;div class=&quot;group-title&quot;&gt;SCI Group&lt;/div&gt;
+
+        &lt;p&gt;
+          Animals received a spinal cord injury. DRG tissue was
+          collected to measure expression following central
+          nervous system injury.
+        &lt;/p&gt;
+
+        &lt;span class=&quot;sample-count&quot;&gt;6 SCI samples&lt;/span&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;vs&quot;&gt;COMPARED WITH&lt;/div&gt;
+
+      &lt;div class=&quot;group-card control&quot;&gt;
+        &lt;div class=&quot;group-title&quot;&gt;Naïve Control Group&lt;/div&gt;
+
+        &lt;p&gt;
+          Naïve animals provided a baseline for comparison with
+          the SCI group. This project used naïve controls,
+          rather than sham-SCI controls.
+        &lt;/p&gt;
+
+        &lt;span class=&quot;sample-count&quot;&gt;4 naïve samples&lt;/span&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;comparison&quot;&gt;
+        &lt;strong&gt;Comparison used in the figures&lt;/strong&gt;&lt;br&gt;
+        SCI vs naïve&lt;br&gt;&lt;br&gt;
+        &lt;strong&gt;Log₂ change = SCI mean − naïve mean&lt;/strong&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;control-note&quot;&gt;
+        &lt;strong&gt;Interpretation:&lt;/strong&gt;
+        This comparison includes differences associated with the
+        injury procedure. It cannot separate spinal cord injury
+        effects from effects of surgery or anesthesia.
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;!-- SUN DATASET --&gt;
+  &lt;section class=&quot;section pni&quot;&gt;
+
+    &lt;div class=&quot;section-header&quot;&gt;
+      &lt;h2&gt;Sun Dataset&lt;/h2&gt;
+      &lt;p&gt;Partial sciatic nerve ligation (pSNL) vs sham controls&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;section-body&quot;&gt;
+
+      &lt;div class=&quot;group-card injured&quot;&gt;
+        &lt;div class=&quot;group-title&quot;&gt;pSNL Group&lt;/div&gt;
+
+        &lt;p&gt;
+          Animals received partial sciatic nerve ligation,
+          a peripheral nerve injury model. DRG tissue was
+          collected to measure expression following injury.
+        &lt;/p&gt;
+
+        &lt;span class=&quot;sample-count&quot;&gt;3 pSNL samples&lt;/span&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;vs&quot;&gt;COMPARED WITH&lt;/div&gt;
+
+      &lt;div class=&quot;group-card control&quot;&gt;
+        &lt;div class=&quot;group-title&quot;&gt;Sham Control Group&lt;/div&gt;
+
+        &lt;p&gt;
+          Animals underwent the corresponding surgical procedure
+          without the sciatic nerve ligation. These controls
+          help account for effects associated with the procedure.
+        &lt;/p&gt;
+
+        &lt;span class=&quot;sample-count&quot;&gt;3 sham samples&lt;/span&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;comparison&quot;&gt;
+        &lt;strong&gt;Comparison used in the figures&lt;/strong&gt;&lt;br&gt;
+        pSNL vs sham&lt;br&gt;&lt;br&gt;
+        &lt;strong&gt;Log₂ change = pSNL mean − sham mean&lt;/strong&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;control-note&quot;&gt;
+        &lt;strong&gt;Interpretation:&lt;/strong&gt;
+        This comparison describes expression differences
+        associated with nerve ligation relative to sham surgery.
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;strong&gt;How are SCI and pSNL compared?&lt;/strong&gt;
+
+  &lt;p&gt;
+    For ATF3, STAT3, GAP43, and JUN, this project compares the
+    change in mean log₂ expression relative to each dataset’s
+    own control group.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    The datasets come from different studies and use different
+    control groups. Their observed differences cannot be
+    attributed solely to injury type, and this descriptive
+    comparison does not establish statistical significance.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    Both datasets measure DRG tissue. The figures compare DRG
+    responses to central and peripheral injury; they do not
+    directly measure CNS versus PNS tissue regeneration.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;source&quot;&gt;
+  Data source:
+  &lt;a href=&quot;https://pmc.ncbi.nlm.nih.gov/articles/PMC10150729/&quot;&gt;
+    Published article and supplementary expression data
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;aside style=&quot;max-width:1150px;margin:24px auto;padding:18px;background:#fff;border-left:4px solid #3979ab;font:15px/1.6 Arial;color:#193047&quot;&gt;&lt;strong&gt;Figure 4. Injury and control groups.&lt;/strong&gt; Charik SCI (n = 6) versus naïve (n = 4), and Sun pSNL (n = 3) versus sham (n = 3). Each injury group is compared with its own dataset’s control.&lt;/aside&gt;&lt;/body&gt;
+&lt;/html&gt;" onload="resizeFigure(this)"></iframe></section>
+<h2 id="results">Results: Figures 5–8</h2><p>Figure 5 summarizes group means and expression changes, Figure 6 displays individual samples, Figure 7 compares mean log₂ changes, and Figure 8 summarizes distributions.</p>
+<p>All SCI-associated mean changes were close to zero: ATF3 +0.055, STAT3 −0.031, GAP43 −0.047, and JUN −0.113. Injury and naïve samples overlapped substantially.</p>
+<p>All four genes had higher means in the pSNL group than in sham controls. ATF3 increased from 8.762 to 11.676 (+2.914 log₂ units); STAT3 increased from 12.656 to 12.995 (+0.339); GAP43 from 12.699 to 13.630 (+0.931); and JUN from 11.410 to 12.337 (+0.928). Individual samples varied, particularly JUN after pSNL.</p>
+<section id="figure5"><h3>Figure 5. Summary of expression values</h3><p><a href="figure5.html">Open figure separately</a></p><iframe title="Figure 5: Summary of expression values" style="height:850px" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+  &lt;title&gt;Figure 5 — Gene Expression Summary&lt;/title&gt;
+
+  &lt;style&gt;
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 35px 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #193047;
+      background: #f5f7fa;
+    }
+
+    main {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 25px;
+      margin: 0 0 20px;
+    }
+
+    figure {
+      margin: 0;
+      padding: 24px;
+      background: white;
+      border: 1px solid #dce4eb;
+      border-radius: 12px;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      min-width: 850px;
+      border-collapse: collapse;
+      font-size: 16px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    th, td {
+      padding: 17px 14px;
+      border-bottom: 1px solid #dce4eb;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    th:first-child,
+    td:first-child {
+      text-align: left;
+    }
+
+    thead th {
+      font-weight: bold;
+    }
+
+    .study-header th {
+      text-align: center;
+      color: white;
+    }
+
+    .study-header .gene-header {
+      background: #193047;
+      text-align: left;
+    }
+
+    .sci-header {
+      background: #3979ab;
+    }
+
+    .psnl-header {
+      background: #a64c29;
+    }
+
+    .column-header th {
+      background: #eef3f7;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    tbody th {
+      font-style: italic;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #f8fafc;
+    }
+
+    .divider {
+      border-left: 2px solid #cbd5e1;
+    }
+
+    .change {
+      font-weight: bold;
+    }
+
+    figcaption {
+      margin-top: 18px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #475569;
+    }
+
+    @media print {
+      body {
+        padding: 0;
+        background: white;
+      }
+
+      figure {
+        border: none;
+        padding: 0;
+      }
+
+      table {
+        min-width: 0;
+        font-size: 12px;
+      }
+
+      th, td {
+        padding: 12px 8px;
+      }
+
+      .column-header th {
+        font-size: 11px;
+      }
+
+      * {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;main&gt;
+  &lt;h1&gt;Figure 5. Summary of DRG gene expression&lt;/h1&gt;
+
+  &lt;figure&gt;
+    &lt;div class=&quot;table-wrapper&quot;&gt;
+      &lt;table aria-label=&quot;Mean log2 expression and injury-minus-control changes&quot;&gt;
+        &lt;thead&gt;
+          &lt;tr class=&quot;study-header&quot;&gt;
+            &lt;th class=&quot;gene-header&quot; rowspan=&quot;2&quot; scope=&quot;col&quot;&gt;
+              Gene
+            &lt;/th&gt;
+            &lt;th class=&quot;sci-header&quot; colspan=&quot;3&quot; scope=&quot;colgroup&quot;&gt;
+              Charik dataset
+            &lt;/th&gt;
+            &lt;th class=&quot;psnl-header divider&quot; colspan=&quot;3&quot; scope=&quot;colgroup&quot;&gt;
+              Sun dataset
+            &lt;/th&gt;
+          &lt;/tr&gt;
+
+          &lt;tr class=&quot;column-header&quot;&gt;
+            &lt;th scope=&quot;col&quot;&gt;Naïve mean&lt;br&gt;(n = 4)&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;SCI mean&lt;br&gt;(n = 6)&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;SCI − naïve&lt;/th&gt;
+            &lt;th class=&quot;divider&quot; scope=&quot;col&quot;&gt;Sham mean&lt;br&gt;(n = 3)&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;pSNL mean&lt;br&gt;(n = 3)&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;pSNL − sham&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;ATF3&lt;/th&gt;
+            &lt;td&gt;9.140&lt;/td&gt;
+            &lt;td&gt;9.196&lt;/td&gt;
+            &lt;td class=&quot;change&quot;&gt;+0.055&lt;/td&gt;
+            &lt;td class=&quot;divider&quot;&gt;8.762&lt;/td&gt;
+            &lt;td&gt;11.676&lt;/td&gt;
+            &lt;td class=&quot;change&quot;&gt;+2.914&lt;/td&gt;
+          &lt;/tr&gt;
+
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;STAT3&lt;/th&gt;
+            &lt;td&gt;13.038&lt;/td&gt;
+            &lt;td&gt;13.008&lt;/td&gt;
+            &lt;td class=&quot;change&quot;&gt;−0.031&lt;/td&gt;
+            &lt;td class=&quot;divider&quot;&gt;12.656&lt;/td&gt;
+            &lt;td&gt;12.995&lt;/td&gt;
+            &lt;td class=&quot;change&quot;&gt;+0.339&lt;/td&gt;
+          &lt;/tr&gt;
+
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;GAP43&lt;/th&gt;
+            &lt;td&gt;13.156&lt;/td&gt;
+            &lt;td&gt;13.110&lt;/td&gt;
+            &lt;td class=&quot;change&quot;&gt;−0.047&lt;/td&gt;
+            &lt;td class=&quot;divider&quot;&gt;12.699&lt;/td&gt;
+            &lt;td&gt;13.630&lt;/td&gt;
+            &lt;td class=&quot;change&quot;&gt;+0.931&lt;/td&gt;
+          &lt;/tr&gt;
+
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;JUN&lt;/th&gt;
+            &lt;td&gt;12.019&lt;/td&gt;
+            &lt;td&gt;11.907&lt;/td&gt;
+            &lt;td class=&quot;change&quot;&gt;−0.113&lt;/td&gt;
+            &lt;td class=&quot;divider&quot;&gt;11.410&lt;/td&gt;
+            &lt;td&gt;12.337&lt;/td&gt;
+            &lt;td class=&quot;change&quot;&gt;+0.928&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+
+    &lt;figcaption&gt;
+      Group means are reported on the processed log₂-expression scale.
+      Changes were calculated as injury mean minus the corresponding
+      control mean using unrounded values, then rounded to three decimal
+      places. No statistical significance is indicated.
+    &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/main&gt;
+&lt;aside style=&quot;max-width:1150px;margin:24px auto;padding:18px;background:#fff;border-left:4px solid #3979ab;font:15px/1.6 Arial;color:#193047&quot;&gt;&lt;strong&gt;Figure 5. Summary of expression values.&lt;/strong&gt; Mean processed log₂ expression and injury-minus-control changes. Differences are calculated using unrounded values and displayed to three decimal places. No statistical significance is indicated. Data source: Supplementary Table S2, Cuevas-Diaz Duran et al. (2023). Calculations and visualization for this project.&lt;/aside&gt;&lt;/body&gt;
+&lt;/html&gt;" onload="resizeFigure(this)"></iframe></section><section id="figure6"><h3>Figure 6. Individual-sample dot plots</h3><p><a href="figure6.html">Open figure separately</a></p><iframe title="Figure 6: Individual-sample dot plots" style="height:850px" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;title&gt;Figure 6 — DRG Dot Plots&lt;/title&gt;
+
+&lt;style&gt;
+body {
+  font: 16px Arial, sans-serif;
+  margin: 25px;
+  background: #f5f7fa;
+  color: #183047;
+}
+main { max-width: 1500px; margin: auto; }
+figure { margin: 20px 0; overflow-x: auto; }
+svg { width: 100%; min-width: 950px; height: auto; }
+text { font-family: Arial, sans-serif; fill: #183047; }
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  text-anchor: middle;
+}
+.tick {
+  font-size: 11px;
+  text-anchor: end;
+}
+.group {
+  font-size: 13px;
+  text-anchor: middle;
+}
+.means {
+  fill: none;
+  stroke: #172c42;
+  stroke-width: 2.5;
+}
+.dots {
+  fill: none;
+  stroke-width: 9;
+  stroke-linecap: round;
+}
+.blue { stroke: #3979ab; }
+.orange { stroke: #df7449; }
+p { line-height: 1.6; }
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;main&gt;
+&lt;h1&gt;Figure 6. Individual-sample DRG expression&lt;/h1&gt;
+&lt;p&gt;Each dot is one sample. Dark horizontal lines show group means.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;svg viewBox=&quot;0 0 1240 620&quot;
+     xmlns=&quot;http://www.w3.org/2000/svg&quot;
+     role=&quot;img&quot;
+     aria-label=&quot;Dot plots for four genes in Charik and Sun datasets&quot;&gt;
+
+&lt;!-- Background and axes reused in every panel --&gt;
+&lt;defs&gt;
+  &lt;g id=&quot;panel&quot;&gt;
+    &lt;rect x=&quot;3&quot; y=&quot;3&quot; width=&quot;300&quot; height=&quot;295&quot; rx=&quot;10&quot;
+          fill=&quot;white&quot; stroke=&quot;#dce4eb&quot;/&gt;
+    &lt;path d=&quot;M65 60H285 M65 150H285 M65 240H285&quot;
+          fill=&quot;none&quot; stroke=&quot;#e5e9ed&quot;/&gt;
+    &lt;path d=&quot;M65 60V240H285&quot;
+          fill=&quot;none&quot; stroke=&quot;#526474&quot;/&gt;
+    &lt;text x=&quot;17&quot; y=&quot;150&quot;
+          transform=&quot;rotate(-90 17 150)&quot;
+          text-anchor=&quot;middle&quot; font-size=&quot;12&quot;&gt;
+      Log₂ expression
+    &lt;/text&gt;
+  &lt;/g&gt;
+&lt;/defs&gt;
+
+&lt;!-- Charik: ATF3 --&gt;
+&lt;g transform=&quot;translate(0 0)&quot;&gt;
+  &lt;use href=&quot;#panel&quot;/&gt;
+  &lt;text class=&quot;title&quot; x=&quot;150&quot; y=&quot;29&quot;&gt;Charik: ATF3&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;64&quot;&gt;10.02&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;154&quot;&gt;9.35&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;244&quot;&gt;8.67&lt;/text&gt;
+
+  &lt;path class=&quot;means&quot; d=&quot;M86 177.4h48&quot;/&gt;
+  &lt;path class=&quot;dots blue&quot;
+        d=&quot;M99.5 173.1h.01 M106.5 219.9h.01
+           M113.5 133.1h.01 M120.5 183.5h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;110&quot; y=&quot;270&quot;&gt;Naïve (n=4)&lt;/text&gt;
+
+  &lt;path class=&quot;means&quot; d=&quot;M206 170h48&quot;/&gt;
+  &lt;path class=&quot;dots orange&quot;
+        d=&quot;M212.5 217h.01 M219.5 212.7h.01 M226.5 200.1h.01
+           M233.5 166.2h.01 M240.5 144h.01 M247.5 80.1h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;230&quot; y=&quot;270&quot;&gt;SCI (n=6)&lt;/text&gt;
+&lt;/g&gt;
+
+&lt;!-- Charik: STAT3 --&gt;
+&lt;g transform=&quot;translate(310 0)&quot;&gt;
+  &lt;use href=&quot;#panel&quot;/&gt;
+  &lt;text class=&quot;title&quot; x=&quot;150&quot; y=&quot;29&quot;&gt;Charik: STAT3&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;64&quot;&gt;13.34&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;154&quot;&gt;12.94&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;244&quot;&gt;12.54&lt;/text&gt;
+
+  &lt;path class=&quot;means&quot; d=&quot;M86 127.6h48&quot;/&gt;
+  &lt;path class=&quot;dots blue&quot;
+        d=&quot;M99.5 121.6h.01 M106.5 99.8h.01
+           M113.5 195.3h.01 M120.5 93.8h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;110&quot; y=&quot;270&quot;&gt;Naïve (n=4)&lt;/text&gt;
+
+  &lt;path class=&quot;means&quot; d=&quot;M206 134.6h48&quot;/&gt;
+  &lt;path class=&quot;dots orange&quot;
+        d=&quot;M212.5 116h.01 M219.5 119.6h.01 M226.5 119.6h.01
+           M233.5 206.2h.01 M240.5 99h.01 M247.5 147.1h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;230&quot; y=&quot;270&quot;&gt;SCI (n=6)&lt;/text&gt;
+&lt;/g&gt;
+
+&lt;!-- Charik: GAP43 — SCI6 corrected to 13.01512823 --&gt;
+&lt;g transform=&quot;translate(620 0)&quot;&gt;
+  &lt;use href=&quot;#panel&quot;/&gt;
+  &lt;text class=&quot;title&quot; x=&quot;150&quot; y=&quot;29&quot;&gt;Charik: GAP43&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;64&quot;&gt;13.55&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;154&quot;&gt;13.125&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;244&quot;&gt;12.70&lt;/text&gt;
+
+  &lt;!-- Naïve mean: 13.15642408 --&gt;
+  &lt;path class=&quot;means&quot; d=&quot;M86 143.35h48&quot;/&gt;
+  &lt;path class=&quot;dots blue&quot;
+        d=&quot;M99.5 148.57h.01 M106.5 121.58h.01
+           M113.5 168.51h.01 M120.5 134.72h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;110&quot; y=&quot;270&quot;&gt;Naïve (n=4)&lt;/text&gt;
+
+  &lt;!-- SCI mean: 13.109756885 --&gt;
+  &lt;path class=&quot;means&quot; d=&quot;M206 153.23h48&quot;/&gt;
+  &lt;path class=&quot;dots orange&quot;
+        d=&quot;M212.5 134.72h.01 M219.5 143.17h.01
+           M226.5 201.02h.01 M233.5 95.65h.01
+           M240.5 171.54h.01 M247.5 173.27h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;230&quot; y=&quot;270&quot;&gt;SCI (n=6)&lt;/text&gt;
+&lt;/g&gt;
+
+&lt;!-- Charik: JUN --&gt;
+&lt;g transform=&quot;translate(930 0)&quot;&gt;
+  &lt;use href=&quot;#panel&quot;/&gt;
+  &lt;text class=&quot;title&quot; x=&quot;150&quot; y=&quot;29&quot;&gt;Charik: JUN&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;64&quot;&gt;12.37&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;154&quot;&gt;11.87&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;244&quot;&gt;11.37&lt;/text&gt;
+
+  &lt;path class=&quot;means&quot; d=&quot;M86 123.3h48&quot;/&gt;
+  &lt;path class=&quot;dots blue&quot;
+        d=&quot;M99.5 113.1h.01 M106.5 132.3h.01
+           M113.5 160.9h.01 M120.5 86.8h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;110&quot; y=&quot;270&quot;&gt;Naïve (n=4)&lt;/text&gt;
+
+  &lt;path class=&quot;means&quot; d=&quot;M206 143.4h48&quot;/&gt;
+  &lt;path class=&quot;dots orange&quot;
+        d=&quot;M212.5 143.4h.01 M219.5 109.2h.01 M226.5 138.4h.01
+           M233.5 213.2h.01 M240.5 127.4h.01 M247.5 128.6h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;230&quot; y=&quot;270&quot;&gt;SCI (n=6)&lt;/text&gt;
+&lt;/g&gt;
+
+&lt;!-- Sun: ATF3 --&gt;
+&lt;g transform=&quot;translate(0 310)&quot;&gt;
+  &lt;use href=&quot;#panel&quot;/&gt;
+  &lt;text class=&quot;title&quot; x=&quot;150&quot; y=&quot;29&quot;&gt;Sun: ATF3&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;64&quot;&gt;12.64&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;154&quot;&gt;10.32&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;244&quot;&gt;8.00&lt;/text&gt;
+
+  &lt;path class=&quot;means&quot; d=&quot;M86 210.6h48&quot;/&gt;
+  &lt;path class=&quot;dots blue&quot;
+        d=&quot;M103 222.6h.01 M110 209.5h.01 M117 199.7h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;110&quot; y=&quot;270&quot;&gt;Sham (n=3)&lt;/text&gt;
+
+  &lt;path class=&quot;means&quot; d=&quot;M206 97.6h48&quot;/&gt;
+  &lt;path class=&quot;dots orange&quot;
+        d=&quot;M223 127.4h.01 M230 77.4h.01 M237 87.9h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;230&quot; y=&quot;270&quot;&gt;pSNL (n=3)&lt;/text&gt;
+&lt;/g&gt;
+
+&lt;!-- Sun: STAT3 --&gt;
+&lt;g transform=&quot;translate(310 310)&quot;&gt;
+  &lt;use href=&quot;#panel&quot;/&gt;
+  &lt;text class=&quot;title&quot; x=&quot;150&quot; y=&quot;29&quot;&gt;Sun: STAT3&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;64&quot;&gt;13.35&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;154&quot;&gt;12.82&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;244&quot;&gt;12.30&lt;/text&gt;
+
+  &lt;path class=&quot;means&quot; d=&quot;M86 178.5h48&quot;/&gt;
+  &lt;path class=&quot;dots blue&quot;
+        d=&quot;M103 159.7h.01 M110 161.5h.01 M117 214.3h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;110&quot; y=&quot;270&quot;&gt;Sham (n=3)&lt;/text&gt;
+
+  &lt;path class=&quot;means&quot; d=&quot;M206 120.5h48&quot;/&gt;
+  &lt;path class=&quot;dots orange&quot;
+        d=&quot;M223 130.4h.01 M230 85.7h.01 M237 145.5h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;230&quot; y=&quot;270&quot;&gt;pSNL (n=3)&lt;/text&gt;
+&lt;/g&gt;
+
+&lt;!-- Sun: GAP43 --&gt;
+&lt;g transform=&quot;translate(620 310)&quot;&gt;
+  &lt;use href=&quot;#panel&quot;/&gt;
+  &lt;text class=&quot;title&quot; x=&quot;150&quot; y=&quot;29&quot;&gt;Sun: GAP43&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;64&quot;&gt;14.07&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;154&quot;&gt;13.26&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;244&quot;&gt;12.46&lt;/text&gt;
+
+  &lt;path class=&quot;means&quot; d=&quot;M86 212.9h48&quot;/&gt;
+  &lt;path class=&quot;dots blue&quot;
+        d=&quot;M103 222.6h.01 M110 200.5h.01 M117 215.5h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;110&quot; y=&quot;270&quot;&gt;Sham (n=3)&lt;/text&gt;
+
+  &lt;path class=&quot;means&quot; d=&quot;M206 108.9h48&quot;/&gt;
+  &lt;path class=&quot;dots orange&quot;
+        d=&quot;M223 148.7h.01 M230 77.4h.01 M237 100.5h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;230&quot; y=&quot;270&quot;&gt;pSNL (n=3)&lt;/text&gt;
+&lt;/g&gt;
+
+&lt;!-- Sun: JUN --&gt;
+&lt;g transform=&quot;translate(930 310)&quot;&gt;
+  &lt;use href=&quot;#panel&quot;/&gt;
+  &lt;text class=&quot;title&quot; x=&quot;150&quot; y=&quot;29&quot;&gt;Sun: JUN&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;64&quot;&gt;13.26&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;154&quot;&gt;12.19&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;244&quot;&gt;11.11&lt;/text&gt;
+
+  &lt;path class=&quot;means&quot; d=&quot;M86 215.2h48&quot;/&gt;
+  &lt;path class=&quot;dots blue&quot;
+        d=&quot;M103 217.1h.01 M110 206h.01 M117 222.6h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;110&quot; y=&quot;270&quot;&gt;Sham (n=3)&lt;/text&gt;
+
+  &lt;path class=&quot;means&quot; d=&quot;M206 137.4h48&quot;/&gt;
+  &lt;path class=&quot;dots orange&quot;
+        d=&quot;M223 192.7h.01 M230 77.4h.01 M237 142h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;230&quot; y=&quot;270&quot;&gt;pSNL (n=3)&lt;/text&gt;
+&lt;/g&gt;
+
+&lt;/svg&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;
+  Top row: Charik naïve vs SCI. Bottom row: Sun sham vs pSNL.
+  Each panel uses its own labeled log₂-expression scale.
+  All sample values are retained.
+  No statistical significance is indicated.
+&lt;/p&gt;
+
+&lt;/main&gt;
+&lt;aside style=&quot;max-width:1150px;margin:24px auto;padding:18px;background:#fff;border-left:4px solid #3979ab;font:15px/1.6 Arial;color:#193047&quot;&gt;&lt;strong&gt;Figure 6. Individual-sample dot plots.&lt;/strong&gt; Each dot is one sample; dark horizontal lines indicate group means. Top row: SCI versus naïve. Bottom row: pSNL versus sham. Each panel has its own labeled scale. Data source: Supplementary Table S2, Cuevas-Diaz Duran et al. (2023). Calculations and visualization for this project.&lt;/aside&gt;&lt;/body&gt;
+&lt;/html&gt;" onload="resizeFigure(this)"></iframe></section><section id="figure7"><h3>Figure 7. Changes in mean log₂ expression</h3><p><a href="figure7.html">Open figure separately</a></p><iframe title="Figure 7: Changes in mean log₂ expression" style="height:850px" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+  &lt;title&gt;Figure 7 — Log2 Change Chart&lt;/title&gt;
+
+  &lt;style&gt;
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      color: #193047;
+      margin: 30px;
+    }
+    main {
+      max-width: 1050px;
+      margin: auto;
+    }
+    figure {
+      background: white;
+      padding: 15px;
+      border: 1px solid #dce4eb;
+      border-radius: 12px;
+      margin: 20px 0;
+    }
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    p {
+      line-height: 1.5;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;main&gt;
+  &lt;h1&gt;Figure 7. Log₂ change in gene expression after injury&lt;/h1&gt;
+
+  &lt;p&gt;
+    Each point is the injury group mean minus its control
+    group mean on the log₂-expression scale.
+  &lt;/p&gt;
+
+  &lt;figure&gt;
+    &lt;svg viewBox=&quot;0 0 980 530&quot;
+         xmlns=&quot;http://www.w3.org/2000/svg&quot;
+         role=&quot;img&quot;
+         aria-label=&quot;Log2 expression changes for four genes&quot;&gt;
+
+      &lt;!-- Horizontal grid lines and y-axis numbers --&gt;
+      &lt;line x1=&quot;85&quot; y1=&quot;405.27&quot; x2=&quot;930&quot; y2=&quot;405.27&quot;
+            stroke=&quot;#e1e7ec&quot;/&gt;
+      &lt;text x=&quot;70&quot; y=&quot;410.27&quot; text-anchor=&quot;end&quot;&gt;−1&lt;/text&gt;
+
+      &lt;line x1=&quot;85&quot; y1=&quot;331.65&quot; x2=&quot;930&quot; y2=&quot;331.65&quot;
+            stroke=&quot;#34495e&quot; stroke-width=&quot;2&quot;/&gt;
+      &lt;text x=&quot;70&quot; y=&quot;336.65&quot; text-anchor=&quot;end&quot;&gt;0&lt;/text&gt;
+
+      &lt;line x1=&quot;85&quot; y1=&quot;258.02&quot; x2=&quot;930&quot; y2=&quot;258.02&quot;
+            stroke=&quot;#e1e7ec&quot;/&gt;
+      &lt;text x=&quot;70&quot; y=&quot;263.02&quot; text-anchor=&quot;end&quot;&gt;1&lt;/text&gt;
+
+      &lt;line x1=&quot;85&quot; y1=&quot;184.40&quot; x2=&quot;930&quot; y2=&quot;184.40&quot;
+            stroke=&quot;#e1e7ec&quot;/&gt;
+      &lt;text x=&quot;70&quot; y=&quot;189.40&quot; text-anchor=&quot;end&quot;&gt;2&lt;/text&gt;
+
+      &lt;line x1=&quot;85&quot; y1=&quot;110.77&quot; x2=&quot;930&quot; y2=&quot;110.77&quot;
+            stroke=&quot;#e1e7ec&quot;/&gt;
+      &lt;text x=&quot;70&quot; y=&quot;115.77&quot; text-anchor=&quot;end&quot;&gt;3&lt;/text&gt;
+
+      &lt;text x=&quot;25&quot; y=&quot;250&quot;
+            transform=&quot;rotate(-90 25 250)&quot;
+            text-anchor=&quot;middle&quot;
+            font-size=&quot;16&quot;&gt;
+        Change in mean log₂ expression
+      &lt;/text&gt;
+
+      &lt;!-- ATF3: SCI +0.06, pSNL +2.91 --&gt;
+      &lt;line x1=&quot;139&quot; y1=&quot;327.58&quot; x2=&quot;191&quot; y2=&quot;117.12&quot;
+            stroke=&quot;#bdcbd5&quot; stroke-width=&quot;2&quot;/&gt;
+
+      &lt;circle cx=&quot;139&quot; cy=&quot;327.58&quot; r=&quot;9&quot; fill=&quot;#3979ab&quot;/&gt;
+      &lt;text x=&quot;139&quot; y=&quot;312.58&quot; text-anchor=&quot;middle&quot;
+            fill=&quot;#3979ab&quot; font-weight=&quot;bold&quot;&gt;+0.06&lt;/text&gt;
+
+      &lt;circle cx=&quot;191&quot; cy=&quot;117.12&quot; r=&quot;9&quot; fill=&quot;#df7449&quot;/&gt;
+      &lt;text x=&quot;191&quot; y=&quot;102.12&quot; text-anchor=&quot;middle&quot;
+            fill=&quot;#df7449&quot; font-weight=&quot;bold&quot;&gt;+2.91&lt;/text&gt;
+
+      &lt;text x=&quot;165&quot; y=&quot;455&quot; text-anchor=&quot;middle&quot;
+            font-weight=&quot;bold&quot;&gt;ATF3&lt;/text&gt;
+
+      &lt;!-- STAT3: SCI -0.03, pSNL +0.34 --&gt;
+      &lt;line x1=&quot;354&quot; y1=&quot;333.92&quot; x2=&quot;406&quot; y2=&quot;306.72&quot;
+            stroke=&quot;#bdcbd5&quot; stroke-width=&quot;2&quot;/&gt;
+
+      &lt;circle cx=&quot;354&quot; cy=&quot;333.92&quot; r=&quot;9&quot; fill=&quot;#3979ab&quot;/&gt;
+      &lt;text x=&quot;354&quot; y=&quot;318.92&quot; text-anchor=&quot;middle&quot;
+            fill=&quot;#3979ab&quot; font-weight=&quot;bold&quot;&gt;−0.03&lt;/text&gt;
+
+      &lt;circle cx=&quot;406&quot; cy=&quot;306.72&quot; r=&quot;9&quot; fill=&quot;#df7449&quot;/&gt;
+      &lt;text x=&quot;406&quot; y=&quot;291.72&quot; text-anchor=&quot;middle&quot;
+            fill=&quot;#df7449&quot; font-weight=&quot;bold&quot;&gt;+0.34&lt;/text&gt;
+
+      &lt;text x=&quot;380&quot; y=&quot;455&quot; text-anchor=&quot;middle&quot;
+            font-weight=&quot;bold&quot;&gt;STAT3&lt;/text&gt;
+
+      &lt;!-- GAP43: corrected SCI -0.046667195, pSNL +0.930527 --&gt;
+      &lt;line x1=&quot;569&quot; y1=&quot;335.08&quot; x2=&quot;621&quot; y2=&quot;263.14&quot;
+            stroke=&quot;#bdcbd5&quot; stroke-width=&quot;2&quot;/&gt;
+
+      &lt;circle cx=&quot;569&quot; cy=&quot;335.08&quot; r=&quot;9&quot; fill=&quot;#3979ab&quot;/&gt;
+      &lt;text x=&quot;569&quot; y=&quot;320.08&quot; text-anchor=&quot;middle&quot;
+            fill=&quot;#3979ab&quot; font-weight=&quot;bold&quot;&gt;−0.05&lt;/text&gt;
+
+      &lt;circle cx=&quot;621&quot; cy=&quot;263.14&quot; r=&quot;9&quot; fill=&quot;#df7449&quot;/&gt;
+      &lt;text x=&quot;621&quot; y=&quot;248.14&quot; text-anchor=&quot;middle&quot;
+            fill=&quot;#df7449&quot; font-weight=&quot;bold&quot;&gt;+0.93&lt;/text&gt;
+
+      &lt;text x=&quot;595&quot; y=&quot;455&quot; text-anchor=&quot;middle&quot;
+            font-weight=&quot;bold&quot;&gt;GAP43&lt;/text&gt;
+
+      &lt;!-- JUN: SCI -0.11, pSNL +0.93 --&gt;
+      &lt;line x1=&quot;784&quot; y1=&quot;339.93&quot; x2=&quot;836&quot; y2=&quot;263.33&quot;
+            stroke=&quot;#bdcbd5&quot; stroke-width=&quot;2&quot;/&gt;
+
+      &lt;circle cx=&quot;784&quot; cy=&quot;339.93&quot; r=&quot;9&quot; fill=&quot;#3979ab&quot;/&gt;
+      &lt;text x=&quot;784&quot; y=&quot;324.93&quot; text-anchor=&quot;middle&quot;
+            fill=&quot;#3979ab&quot; font-weight=&quot;bold&quot;&gt;−0.11&lt;/text&gt;
+
+      &lt;circle cx=&quot;836&quot; cy=&quot;263.33&quot; r=&quot;9&quot; fill=&quot;#df7449&quot;/&gt;
+      &lt;text x=&quot;836&quot; y=&quot;248.33&quot; text-anchor=&quot;middle&quot;
+            fill=&quot;#df7449&quot; font-weight=&quot;bold&quot;&gt;+0.93&lt;/text&gt;
+
+      &lt;text x=&quot;810&quot; y=&quot;455&quot; text-anchor=&quot;middle&quot;
+            font-weight=&quot;bold&quot;&gt;JUN (c-Jun)&lt;/text&gt;
+
+      &lt;!-- Legend --&gt;
+      &lt;circle cx=&quot;345&quot; cy=&quot;38&quot; r=&quot;7&quot; fill=&quot;#3979ab&quot;/&gt;
+      &lt;text x=&quot;359&quot; y=&quot;43&quot; font-size=&quot;15&quot;&gt;
+        Charik: SCI vs naïve
+      &lt;/text&gt;
+
+      &lt;circle cx=&quot;600&quot; cy=&quot;38&quot; r=&quot;7&quot; fill=&quot;#df7449&quot;/&gt;
+      &lt;text x=&quot;614&quot; y=&quot;43&quot; font-size=&quot;15&quot;&gt;
+        Sun: pSNL vs sham
+      &lt;/text&gt;
+
+      &lt;text x=&quot;500&quot; y=&quot;487&quot; text-anchor=&quot;middle&quot; font-size=&quot;14&quot;&gt;
+        Above zero = higher after injury; below zero = lower after injury
+      &lt;/text&gt;
+    &lt;/svg&gt;
+  &lt;/figure&gt;
+
+  &lt;p&gt;
+    Changes are calculated from group means and displayed to two
+    decimal places. SCI is compared with naïve controls; pSNL is
+    compared with sham controls. These are descriptive comparisons
+    between separate datasets and do not indicate statistical significance.
+  &lt;/p&gt;
+&lt;/main&gt;
+&lt;aside style=&quot;max-width:1150px;margin:24px auto;padding:18px;background:#fff;border-left:4px solid #3979ab;font:15px/1.6 Arial;color:#193047&quot;&gt;&lt;strong&gt;Figure 7. Changes in mean log₂ expression.&lt;/strong&gt; Points show injury mean minus control mean on the processed log₂-expression scale. Positive values indicate higher mean expression after injury. These descriptive changes are not model-derived differential-expression estimates. Data source: Supplementary Table S2, Cuevas-Diaz Duran et al. (2023). Calculations and visualization for this project.&lt;/aside&gt;&lt;/body&gt;
+&lt;/html&gt;" onload="resizeFigure(this)"></iframe></section><section id="figure8"><h3>Figure 8. Expression distributions</h3><p><a href="figure8.html">Open figure separately</a></p><iframe title="Figure 8: Expression distributions" style="height:850px" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;title&gt;Figure 8 — DRG Box Plots&lt;/title&gt;
+
+&lt;style&gt;
+body {
+  font: 16px Arial, sans-serif;
+  margin: 25px;
+  background: #f5f7fa;
+  color: #183047;
+}
+main { max-width: 1500px; margin: auto; }
+figure { margin: 20px 0; overflow-x: auto; }
+svg { width: 100%; min-width: 950px; height: auto; }
+text { font-family: Arial, sans-serif; fill: #183047; }
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  text-anchor: middle;
+}
+.tick {
+  font-size: 11px;
+  text-anchor: end;
+}
+.group {
+  font-size: 13px;
+  text-anchor: middle;
+}
+.blue { fill: #3979ab; stroke: #3979ab; }
+.orange { fill: #df7449; stroke: #df7449; }
+.boxes rect { fill-opacity: .24; stroke-width: 2; }
+.whisker {
+  fill: none;
+  stroke: #526474;
+  stroke-width: 1.5;
+}
+.median {
+  fill: none;
+  stroke: #172c42;
+  stroke-width: 2.5;
+}
+.dots {
+  fill: none;
+  stroke-width: 9;
+  stroke-linecap: round;
+}
+p { line-height: 1.6; }
+.caption { font-size: 14px; }
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;main&gt;
+
+&lt;h1&gt;Figure 8. Distribution of DRG expression&lt;/h1&gt;
+&lt;p&gt;
+  Boxes show the middle 50% of sample values.
+  Dark horizontal lines show medians.
+  Colored dots show individual samples.
+&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;svg viewBox=&quot;0 0 1240 620&quot;
+     xmlns=&quot;http://www.w3.org/2000/svg&quot;
+     role=&quot;img&quot;
+     aria-label=&quot;Box plots of four genes in Charik and Sun datasets&quot;&gt;
+
+&lt;defs&gt;
+  &lt;g id=&quot;panel&quot;&gt;
+    &lt;rect x=&quot;3&quot; y=&quot;3&quot; width=&quot;300&quot; height=&quot;295&quot; rx=&quot;10&quot;
+          fill=&quot;white&quot; stroke=&quot;#dce4eb&quot;/&gt;
+    &lt;path d=&quot;M65 60H285 M65 150H285 M65 240H285&quot;
+          fill=&quot;none&quot; stroke=&quot;#e5e9ed&quot;/&gt;
+    &lt;path d=&quot;M65 60V240H285&quot;
+          fill=&quot;none&quot; stroke=&quot;#526474&quot;/&gt;
+    &lt;text x=&quot;17&quot; y=&quot;150&quot;
+          transform=&quot;rotate(-90 17 150)&quot;
+          text-anchor=&quot;middle&quot; font-size=&quot;12&quot;&gt;
+      Log₂ expression
+    &lt;/text&gt;
+  &lt;/g&gt;
+&lt;/defs&gt;
+
+&lt;!-- Charik: ATF3 --&gt;
+&lt;g transform=&quot;translate(0 0)&quot;&gt;
+  &lt;use href=&quot;#panel&quot;/&gt;
+  &lt;text class=&quot;title&quot; x=&quot;150&quot; y=&quot;29&quot;&gt;Charik: ATF3&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;64&quot;&gt;10.02&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;154&quot;&gt;9.35&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;244&quot;&gt;8.67&lt;/text&gt;
+
+  &lt;g class=&quot;boxes blue&quot;&gt;
+    &lt;path class=&quot;whisker&quot;
+          d=&quot;M110 133.1V163.1 M110 192.6V219.9
+             M96 133.1h28 M96 219.9h28&quot;/&gt;
+    &lt;rect x=&quot;86&quot; y=&quot;163.1&quot; width=&quot;48&quot; height=&quot;29.5&quot;/&gt;
+    &lt;path class=&quot;median&quot; d=&quot;M86 178.3h48&quot;/&gt;
+  &lt;/g&gt;
+  &lt;path class=&quot;dots blue&quot;
+        d=&quot;M99.5 173.1h.01 M106.5 219.9h.01
+           M113.5 133.1h.01 M120.5 183.5h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;110&quot; y=&quot;270&quot;&gt;Naïve (n=4)&lt;/text&gt;
+
+  &lt;g class=&quot;boxes orange&quot;&gt;
+    &lt;path class=&quot;whisker&quot;
+          d=&quot;M230 80.1V149.6 M230 209.6V217
+             M216 80.1h28 M216 217h28&quot;/&gt;
+    &lt;rect x=&quot;206&quot; y=&quot;149.6&quot; width=&quot;48&quot; height=&quot;60&quot;/&gt;
+    &lt;path class=&quot;median&quot; d=&quot;M206 183.2h48&quot;/&gt;
+  &lt;/g&gt;
+  &lt;path class=&quot;dots orange&quot;
+        d=&quot;M212.5 217h.01 M219.5 212.7h.01 M226.5 200.1h.01
+           M233.5 166.2h.01 M240.5 144h.01 M247.5 80.1h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;230&quot; y=&quot;270&quot;&gt;SCI (n=6)&lt;/text&gt;
+&lt;/g&gt;
+
+&lt;!-- Charik: STAT3 --&gt;
+&lt;g transform=&quot;translate(310 0)&quot;&gt;
+  &lt;use href=&quot;#panel&quot;/&gt;
+  &lt;text class=&quot;title&quot; x=&quot;150&quot; y=&quot;29&quot;&gt;Charik: STAT3&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;64&quot;&gt;13.34&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;154&quot;&gt;12.94&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;244&quot;&gt;12.54&lt;/text&gt;
+
+  &lt;g class=&quot;boxes blue&quot;&gt;
+    &lt;path class=&quot;whisker&quot;
+          d=&quot;M110 93.8V98.3 M110 140V195.3
+             M96 93.8h28 M96 195.3h28&quot;/&gt;
+    &lt;rect x=&quot;86&quot; y=&quot;98.3&quot; width=&quot;48&quot; height=&quot;41.7&quot;/&gt;
+    &lt;path class=&quot;median&quot; d=&quot;M86 110.7h48&quot;/&gt;
+  &lt;/g&gt;
+  &lt;path class=&quot;dots blue&quot;
+        d=&quot;M99.5 121.6h.01 M106.5 99.8h.01
+           M113.5 195.3h.01 M120.5 93.8h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;110&quot; y=&quot;270&quot;&gt;Naïve (n=4)&lt;/text&gt;
+
+  &lt;g class=&quot;boxes orange&quot;&gt;
+    &lt;path class=&quot;whisker&quot;
+          d=&quot;M230 99V116.9 M230 140.2V147.1
+             M216 99h28 M216 147.1h28&quot;/&gt;
+    &lt;rect x=&quot;206&quot; y=&quot;116.9&quot; width=&quot;48&quot; height=&quot;23.3&quot;/&gt;
+    &lt;path class=&quot;median&quot; d=&quot;M206 119.6h48&quot;/&gt;
+  &lt;/g&gt;
+  &lt;path class=&quot;dots orange&quot;
+        d=&quot;M212.5 116h.01 M219.5 119.6h.01 M226.5 119.6h.01
+           M233.5 206.2h.01 M240.5 99h.01 M247.5 147.1h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;230&quot; y=&quot;270&quot;&gt;SCI (n=6)&lt;/text&gt;
+&lt;/g&gt;
+
+&lt;!-- Charik: GAP43 — SCI6 corrected to 13.01512823 --&gt;
+&lt;g transform=&quot;translate(620 0)&quot;&gt;
+  &lt;use href=&quot;#panel&quot;/&gt;
+  &lt;text class=&quot;title&quot; x=&quot;150&quot; y=&quot;29&quot;&gt;Charik: GAP43&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;64&quot;&gt;13.55&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;154&quot;&gt;13.125&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;244&quot;&gt;12.70&lt;/text&gt;
+
+  &lt;g class=&quot;boxes blue&quot;&gt;
+    &lt;path class=&quot;whisker&quot;
+          d=&quot;M110 121.58V131.44 M110 153.55V168.51
+             M96 121.58h28 M96 168.51h28&quot;/&gt;
+    &lt;rect x=&quot;86&quot; y=&quot;131.44&quot; width=&quot;48&quot; height=&quot;22.12&quot;/&gt;
+    &lt;path class=&quot;median&quot; d=&quot;M86 141.65h48&quot;/&gt;
+  &lt;/g&gt;
+  &lt;path class=&quot;dots blue&quot;
+        d=&quot;M99.5 148.57h.01 M106.5 121.58h.01
+           M113.5 168.51h.01 M120.5 134.72h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;110&quot; y=&quot;270&quot;&gt;Naïve (n=4)&lt;/text&gt;
+
+  &lt;g class=&quot;boxes orange&quot;&gt;
+    &lt;path class=&quot;whisker&quot;
+          d=&quot;M230 95.65V136.84 M230 172.83V201.02
+             M216 95.65h28 M216 201.02h28&quot;/&gt;
+    &lt;rect x=&quot;206&quot; y=&quot;136.84&quot; width=&quot;48&quot; height=&quot;36.00&quot;/&gt;
+    &lt;path class=&quot;median&quot; d=&quot;M206 157.36h48&quot;/&gt;
+  &lt;/g&gt;
+  &lt;path class=&quot;dots orange&quot;
+        d=&quot;M212.5 134.72h.01 M219.5 143.17h.01
+           M226.5 201.02h.01 M233.5 95.65h.01
+           M240.5 171.54h.01 M247.5 173.27h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;230&quot; y=&quot;270&quot;&gt;SCI (n=6)&lt;/text&gt;
+&lt;/g&gt;
+
+&lt;!-- Charik: JUN --&gt;
+&lt;g transform=&quot;translate(930 0)&quot;&gt;
+  &lt;use href=&quot;#panel&quot;/&gt;
+  &lt;text class=&quot;title&quot; x=&quot;150&quot; y=&quot;29&quot;&gt;Charik: JUN&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;64&quot;&gt;12.37&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;154&quot;&gt;11.87&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;244&quot;&gt;11.37&lt;/text&gt;
+
+  &lt;g class=&quot;boxes blue&quot;&gt;
+    &lt;path class=&quot;whisker&quot;
+          d=&quot;M110 86.8V106.5 M110 139.4V160.9
+             M96 86.8h28 M96 160.9h28&quot;/&gt;
+    &lt;rect x=&quot;86&quot; y=&quot;106.5&quot; width=&quot;48&quot; height=&quot;32.9&quot;/&gt;
+    &lt;path class=&quot;median&quot; d=&quot;M86 122.7h48&quot;/&gt;
+  &lt;/g&gt;
+  &lt;path class=&quot;dots blue&quot;
+        d=&quot;M99.5 113.1h.01 M106.5 132.3h.01
+           M113.5 160.9h.01 M120.5 86.8h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;110&quot; y=&quot;270&quot;&gt;Naïve (n=4)&lt;/text&gt;
+
+  &lt;g class=&quot;boxes orange&quot;&gt;
+    &lt;path class=&quot;whisker&quot;
+          d=&quot;M230 109.2V127.7 M230 142.1V143.4
+             M216 109.2h28 M216 143.4h28&quot;/&gt;
+    &lt;rect x=&quot;206&quot; y=&quot;127.7&quot; width=&quot;48&quot; height=&quot;14.4&quot;/&gt;
+    &lt;path class=&quot;median&quot; d=&quot;M206 133.5h48&quot;/&gt;
+  &lt;/g&gt;
+  &lt;path class=&quot;dots orange&quot;
+        d=&quot;M212.5 143.4h.01 M219.5 109.2h.01 M226.5 138.4h.01
+           M233.5 213.2h.01 M240.5 127.4h.01 M247.5 128.6h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;230&quot; y=&quot;270&quot;&gt;SCI (n=6)&lt;/text&gt;
+&lt;/g&gt;
+
+&lt;!-- Sun: ATF3 --&gt;
+&lt;g transform=&quot;translate(0 310)&quot;&gt;
+  &lt;use href=&quot;#panel&quot;/&gt;
+  &lt;text class=&quot;title&quot; x=&quot;150&quot; y=&quot;29&quot;&gt;Sun: ATF3&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;64&quot;&gt;12.64&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;154&quot;&gt;10.32&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;244&quot;&gt;8.00&lt;/text&gt;
+
+  &lt;g class=&quot;boxes blue&quot;&gt;
+    &lt;path class=&quot;whisker&quot;
+          d=&quot;M110 199.7V204.6 M110 216V222.6
+             M96 199.7h28 M96 222.6h28&quot;/&gt;
+    &lt;rect x=&quot;86&quot; y=&quot;204.6&quot; width=&quot;48&quot; height=&quot;11.4&quot;/&gt;
+    &lt;path class=&quot;median&quot; d=&quot;M86 209.5h48&quot;/&gt;
+  &lt;/g&gt;
+  &lt;path class=&quot;dots blue&quot;
+        d=&quot;M103 222.6h.01 M110 209.5h.01 M117 199.7h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;110&quot; y=&quot;270&quot;&gt;Sham (n=3)&lt;/text&gt;
+
+  &lt;g class=&quot;boxes orange&quot;&gt;
+    &lt;path class=&quot;whisker&quot;
+          d=&quot;M230 77.4V82.7 M230 107.6V127.4
+             M216 77.4h28 M216 127.4h28&quot;/&gt;
+    &lt;rect x=&quot;206&quot; y=&quot;82.7&quot; width=&quot;48&quot; height=&quot;25&quot;/&gt;
+    &lt;path class=&quot;median&quot; d=&quot;M206 87.9h48&quot;/&gt;
+  &lt;/g&gt;
+  &lt;path class=&quot;dots orange&quot;
+        d=&quot;M223 127.4h.01 M230 77.4h.01 M237 87.9h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;230&quot; y=&quot;270&quot;&gt;pSNL (n=3)&lt;/text&gt;
+&lt;/g&gt;
+
+&lt;!-- Sun: STAT3 --&gt;
+&lt;g transform=&quot;translate(310 310)&quot;&gt;
+  &lt;use href=&quot;#panel&quot;/&gt;
+  &lt;text class=&quot;title&quot; x=&quot;150&quot; y=&quot;29&quot;&gt;Sun: STAT3&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;64&quot;&gt;13.35&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;154&quot;&gt;12.82&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;244&quot;&gt;12.30&lt;/text&gt;
+
+  &lt;g class=&quot;boxes blue&quot;&gt;
+    &lt;path class=&quot;whisker&quot;
+          d=&quot;M110 159.7V160.6 M110 187.9V214.3
+             M96 159.7h28 M96 214.3h28&quot;/&gt;
+    &lt;rect x=&quot;86&quot; y=&quot;160.6&quot; width=&quot;48&quot; height=&quot;27.3&quot;/&gt;
+    &lt;path class=&quot;median&quot; d=&quot;M86 161.5h48&quot;/&gt;
+  &lt;/g&gt;
+  &lt;path class=&quot;dots blue&quot;
+        d=&quot;M103 159.7h.01 M110 161.5h.01 M117 214.3h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;110&quot; y=&quot;270&quot;&gt;Sham (n=3)&lt;/text&gt;
+
+  &lt;g class=&quot;boxes orange&quot;&gt;
+    &lt;path class=&quot;whisker&quot;
+          d=&quot;M230 85.7V108 M230 138V145.5
+             M216 85.7h28 M216 145.5h28&quot;/&gt;
+    &lt;rect x=&quot;206&quot; y=&quot;108&quot; width=&quot;48&quot; height=&quot;29.9&quot;/&gt;
+    &lt;path class=&quot;median&quot; d=&quot;M206 130.4h48&quot;/&gt;
+  &lt;/g&gt;
+  &lt;path class=&quot;dots orange&quot;
+        d=&quot;M223 130.4h.01 M230 85.7h.01 M237 145.5h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;230&quot; y=&quot;270&quot;&gt;pSNL (n=3)&lt;/text&gt;
+&lt;/g&gt;
+
+&lt;!-- Sun: GAP43 --&gt;
+&lt;g transform=&quot;translate(620 310)&quot;&gt;
+  &lt;use href=&quot;#panel&quot;/&gt;
+  &lt;text class=&quot;title&quot; x=&quot;150&quot; y=&quot;29&quot;&gt;Sun: GAP43&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;64&quot;&gt;14.07&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;154&quot;&gt;13.26&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;244&quot;&gt;12.46&lt;/text&gt;
+
+  &lt;g class=&quot;boxes blue&quot;&gt;
+    &lt;path class=&quot;whisker&quot;
+          d=&quot;M110 200.5V208 M110 219V222.6
+             M96 200.5h28 M96 222.6h28&quot;/&gt;
+    &lt;rect x=&quot;86&quot; y=&quot;208&quot; width=&quot;48&quot; height=&quot;11&quot;/&gt;
+    &lt;path class=&quot;median&quot; d=&quot;M86 215.5h48&quot;/&gt;
+  &lt;/g&gt;
+  &lt;path class=&quot;dots blue&quot;
+        d=&quot;M103 222.6h.01 M110 200.5h.01 M117 215.5h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;110&quot; y=&quot;270&quot;&gt;Sham (n=3)&lt;/text&gt;
+
+  &lt;g class=&quot;boxes orange&quot;&gt;
+    &lt;path class=&quot;whisker&quot;
+          d=&quot;M230 77.4V89 M230 124.6V148.7
+             M216 77.4h28 M216 148.7h28&quot;/&gt;
+    &lt;rect x=&quot;206&quot; y=&quot;89&quot; width=&quot;48&quot; height=&quot;35.6&quot;/&gt;
+    &lt;path class=&quot;median&quot; d=&quot;M206 100.5h48&quot;/&gt;
+  &lt;/g&gt;
+  &lt;path class=&quot;dots orange&quot;
+        d=&quot;M223 148.7h.01 M230 77.4h.01 M237 100.5h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;230&quot; y=&quot;270&quot;&gt;pSNL (n=3)&lt;/text&gt;
+&lt;/g&gt;
+
+&lt;!-- Sun: JUN --&gt;
+&lt;g transform=&quot;translate(930 310)&quot;&gt;
+  &lt;use href=&quot;#panel&quot;/&gt;
+  &lt;text class=&quot;title&quot; x=&quot;150&quot; y=&quot;29&quot;&gt;Sun: JUN&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;64&quot;&gt;13.26&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;154&quot;&gt;12.19&lt;/text&gt;
+  &lt;text class=&quot;tick&quot; x=&quot;55&quot; y=&quot;244&quot;&gt;11.11&lt;/text&gt;
+
+  &lt;g class=&quot;boxes blue&quot;&gt;
+    &lt;path class=&quot;whisker&quot;
+          d=&quot;M110 206V211.6 M110 219.8V222.6
+             M96 206h28 M96 222.6h28&quot;/&gt;
+    &lt;rect x=&quot;86&quot; y=&quot;211.6&quot; width=&quot;48&quot; height=&quot;8.3&quot;/&gt;
+    &lt;path class=&quot;median&quot; d=&quot;M86 217.1h48&quot;/&gt;
+  &lt;/g&gt;
+  &lt;path class=&quot;dots blue&quot;
+        d=&quot;M103 217.1h.01 M110 206h.01 M117 222.6h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;110&quot; y=&quot;270&quot;&gt;Sham (n=3)&lt;/text&gt;
+
+  &lt;g class=&quot;boxes orange&quot;&gt;
+    &lt;path class=&quot;whisker&quot;
+          d=&quot;M230 77.4V109.7 M230 167.4V192.7
+             M216 77.4h28 M216 192.7h28&quot;/&gt;
+    &lt;rect x=&quot;206&quot; y=&quot;109.7&quot; width=&quot;48&quot; height=&quot;57.6&quot;/&gt;
+    &lt;path class=&quot;median&quot; d=&quot;M206 142h48&quot;/&gt;
+  &lt;/g&gt;
+  &lt;path class=&quot;dots orange&quot;
+        d=&quot;M223 192.7h.01 M230 77.4h.01 M237 142h.01&quot;/&gt;
+  &lt;text class=&quot;group&quot; x=&quot;230&quot; y=&quot;270&quot;&gt;pSNL (n=3)&lt;/text&gt;
+&lt;/g&gt;
+
+&lt;/svg&gt;
+&lt;/figure&gt;
+
+&lt;p class=&quot;caption&quot;&gt;
+  Top row: Charik naïve vs SCI. Bottom row: Sun sham vs pSNL.
+  Each panel has its own labeled log₂-expression scale.
+  Quartiles use linear interpolation. Whiskers extend to the
+  most extreme observations within 1.5 times the interquartile range.
+  All samples are retained. No statistical significance is indicated.
+&lt;/p&gt;
+
+&lt;/main&gt;
+&lt;aside style=&quot;max-width:1150px;margin:24px auto;padding:18px;background:#fff;border-left:4px solid #3979ab;font:15px/1.6 Arial;color:#193047&quot;&gt;&lt;strong&gt;Figure 8. Expression distributions.&lt;/strong&gt; Boxes show the middle 50% of values, dark lines indicate medians, and dots show samples. Quartiles use linear interpolation; whiskers reach observations within 1.5 times the interquartile range. These are the same samples as Figure 6. Data source: Supplementary Table S2, Cuevas-Diaz Duran et al. (2023). Calculations and visualization for this project.&lt;/aside&gt;&lt;/body&gt;
+&lt;/html&gt;" onload="resizeFigure(this)"></iframe></section>
+<h2 id="limitations">Meaning and limitations</h2><p>The selected genes showed larger positive mean changes in the Sun pSNL dataset than in the Charik SCI dataset. This describes the sampled expression response and does not demonstrate greater regeneration.</p>
+<p>Limitations include small samples, separate studies, different controls, collection times, procedures, and tissue composition. Both datasets measure DRG tissue rather than a direct comparison of CNS and PNS tissues. RNA abundance does not establish protein abundance or activity, and these figures establish no statistical significance. Figures 6 and 8 visualize the same samples.</p>
+<p><strong>Unresolved sample inclusion:</strong> Before journal submission, sample identities and inclusion must be reconciled with the source study’s reported exclusion of a Sun pSNL sample. The displayed results retain the project’s three pSNL observations.</p>
+<h2>Conclusion</h2><p>ATF3, STAT3, GAP43, and JUN showed positive mean changes following pSNL, whereas SCI-associated changes were small. ATF3 had the largest pSNL-associated increase. Further statistical analysis and direct regeneration measurements are needed to assess biological implications.</p>
+<h2 id="references">References</h2><ul><li>Cuevas-Diaz Duran, R., Li, Y., Garza Carbajal, A., You, Y., Dessauer, C. W., Wu, J., &amp; Walters, E. T. (2023). Major differences in transcriptional alterations in dorsal root ganglia between spinal cord injury and peripheral neuropathic pain models. Journal of Neurotrauma, 40(9–10), 883–900. <a href="https://doi.org/10.1089/neu.2022.0238">https://doi.org/10.1089/neu.2022.0238</a></li><li>Gaudet, A. D., Popovich, P. G., &amp; Ramer, M. S. (2011). Wallerian degeneration: Gaining perspective on inflammatory events after peripheral nerve injury. Journal of Neuroinflammation, 8, 110. <a href="https://doi.org/10.1186/1742-2094-8-110">https://doi.org/10.1186/1742-2094-8-110</a></li><li>Lee, J., &amp; Cho, Y. (2021). Comparative gene expression profiling reveals the mechanisms of axon regeneration. The FEBS Journal, 288(16), 4786–4797. <a href="https://doi.org/10.1111/febs.15646">https://doi.org/10.1111/febs.15646</a></li><li>Li, W., Liu, G., Liang, J., Wang, X., Song, M., Liu, X., Wang, L., Yang, Z., &amp; Zhang, B. (2025). The dance between Schwann cells and macrophages during the repair of peripheral nerve injury. Neuroscience Bulletin, 41(8), 1448–1462. <a href="https://doi.org/10.1007/s12264-025-01427-y">https://doi.org/10.1007/s12264-025-01427-y</a></li><li>Mietto, B. S., Mostacada, K., &amp; Martinez, A. M. B. (2015). Neurotrauma and inflammation: CNS and PNS responses. Mediators of Inflammation, 2015, 251204. <a href="https://doi.org/10.1155/2015/251204">https://doi.org/10.1155/2015/251204</a></li><li>Nocera, G., &amp; Jacob, C. (2020). Mechanisms of Schwann cell plasticity involved in peripheral nerve repair after injury. Cellular and Molecular Life Sciences, 77(20), 3977–3989. <a href="https://doi.org/10.1007/s00018-020-03516-9">https://doi.org/10.1007/s00018-020-03516-9</a></li><li>O’Brien, A. L., West, J. M., Saffari, T. M., Nguyen, M., &amp; Moore, A. M. (2022). Promoting nerve regeneration: Electrical stimulation, gene therapy, and beyond. Physiology, 37(6), 302–310. <a href="https://doi.org/10.1152/physiol.00008.2022">https://doi.org/10.1152/physiol.00008.2022</a></li></ul></main>
+<script>function resizeFigure(f){try{f.style.height=(f.contentDocument.documentElement.scrollHeight+24)+'px'}catch(e){}}window.addEventListener('resize',()=>document.querySelectorAll('iframe').forEach(resizeFigure));</script></body></html>
